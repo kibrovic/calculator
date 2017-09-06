@@ -1,37 +1,61 @@
 body {
   font-family: 'Orbitron', sans-serif;
+  background-color: #BFD7B5;
+}
+
+p {
+  color: #D4CB92;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.calculator {
+  background-color: #544B3D;
+  width: 300px;
+  height: 365px;
+  display: block;
+  margin: auto;
+  margin-top: 20vh;
+  padding: 5px;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.display {
+  background-color: #4E6E58;
+  padding: 5px;
+  margin: auto;
+  height: 60px;
+  width: 280px;
+  color: #D4CB92;
+  text-align: right;
+  border-radius: 8px;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.operation {
+  font-size: 1.5em;
 }
 
 .buttons {
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  margin: 15 auto;
+  padding: 5px;
 }
 
-.show-grid {
-  background-color: #f2f2f2;
+.equalButton {
+  height: 95px;
+}
+
+.well {
+  min-height: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }

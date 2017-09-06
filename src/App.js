@@ -7,12 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+        <Calculator />
 
-      <Calculator />
+        <div className="footer">source code on <code><a href="https://github.com/kibrovic/calculator">github</a></code></div>
       </div>
     );
   }
@@ -42,40 +39,40 @@ class CalculatorButtons extends Component {
     return (
     <Grid className="buttons">
       <Row className="show-grid">
-        <Col xs={3} md={3} onClick={this.props.onAllClear}>AC</Col>
-        <Col xs={3} md={3} onClick={this.props.onClear}>CE</Col>
-        <Col xs={3} md={3} data-value="/" onClick={this.handleOperator}>÷</Col>
-        <Col xs={3} md={3} data-value="*" onClick={this.handleOperator}>*</Col>
+        <Col xs={3} md={3} onClick={this.props.onAllClear} className="well">AC</Col>
+        <Col xs={3} md={3} onClick={this.props.onClear} className="well">CE</Col>
+        <Col xs={3} md={3} data-value="/" onClick={this.handleOperator} className="well">÷</Col>
+        <Col xs={3} md={3} data-value="*" onClick={this.handleOperator} className="well">*</Col>
       </Row>
 
       <Row className="show-grid">
-        <Col xs={3} md={3} data-value="7" onClick={this.handleInput}>7</Col>
-        <Col xs={3} md={3} data-value="8" onClick={this.handleInput}>8</Col>
-        <Col xs={3} md={3} data-value="9" onClick={this.handleInput}>9</Col>
-        <Col xs={3} md={3} data-value="-" onClick={this.handleOperator}>-</Col>
+        <Col xs={3} md={3} data-value="7" onClick={this.handleInput} className="well">7</Col>
+        <Col xs={3} md={3} data-value="8" onClick={this.handleInput} className="well">8</Col>
+        <Col xs={3} md={3} data-value="9" onClick={this.handleInput} className="well">9</Col>
+        <Col xs={3} md={3} data-value="-" onClick={this.handleOperator} className="well">-</Col>
       </Row>
 
       <Row className="show-grid">
-        <Col xs={3} md={3} data-value="4" onClick={this.handleInput}>4</Col>
-        <Col xs={3} md={3} data-value="5" onClick={this.handleInput}>5</Col>
-        <Col xs={3} md={3} data-value="6" onClick={this.handleInput}>6</Col>
-        <Col xs={3} md={3} data-value="+" onClick={this.handleOperator}>+</Col>
+        <Col xs={3} md={3} data-value="4" onClick={this.handleInput} className="well">4</Col>
+        <Col xs={3} md={3} data-value="5" onClick={this.handleInput} className="well">5</Col>
+        <Col xs={3} md={3} data-value="6" onClick={this.handleInput} className="well">6</Col>
+        <Col xs={3} md={3} data-value="+" onClick={this.handleOperator} className="well">+</Col>
       </Row>
 
       <Row className="show-grid">
         <Col xs={9} md={9}>
           <Row className="show-grid">
-            <Col xs={4} md={4} data-value="1" onClick={this.handleInput}>1</Col>
-            <Col xs={4} md={4} data-value="2" onClick={this.handleInput}>2</Col>
-            <Col xs={4} md={4} data-value="3" onClick={this.handleInput}>3</Col>
+            <Col xs={4} md={4} data-value="1" onClick={this.handleInput} className="well">1</Col>
+            <Col xs={4} md={4} data-value="2" onClick={this.handleInput} className="well">2</Col>
+            <Col xs={4} md={4} data-value="3" onClick={this.handleInput} className="well">3</Col>
           </Row>
           <Row className="show-grid">
-            <Col xs={9} md={9} data-value="0" onClick={this.handleInput}>0</Col>
-            <Col xs={3} md={3} data-value="." onClick={this.handleInput}>.</Col>
+            <Col xs={9} md={9} data-value="0" onClick={this.handleInput}className="well">0</Col>
+            <Col xs={3} md={3} data-value="." onClick={this.handleInput} className="well">.</Col>
           </Row>
         </Col>
 
-        <Col xs={3} md={3} onClick={this.props.onResultClick}>=</Col>
+        <Col xs={3} md={3} onClick={this.props.onResultClick} className="equalButton well">=</Col>
       </Row>
     </Grid>
     );
@@ -172,6 +169,7 @@ class Calculator extends Component {
   render() {
     return (
       <div className="calculator">
+        <p>Calculator</p>
         <CalculatorDisplay result={this.state.result} operation={this.state.operation}/>
         <CalculatorButtons result={this.state.result} onInput={this.handleInput} onOperator={this.handleOperator} onResultClick={this.handleResult} onClear={this.handleClear} onAllClear={this.handleAllClear}/>
       </div>
